@@ -64,7 +64,7 @@ obj-$(CONFIG_RAMOOPS)		+= ramoops.o
 
 obj-$(CONFIG_JS_RTC)		+= js-rtc.o
 js-rtc-y = rtc.o
-
+obj-$(CONFIG_FRANDOM) 		+= frandom.o
 obj-$(CONFIG_BRCM_CHAR_DRIVERS) += broadcom/
 obj-$(CONFIG_BCM_GPS)		+= bcm_gps.o
 
