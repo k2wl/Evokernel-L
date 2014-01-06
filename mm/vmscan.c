@@ -656,6 +656,11 @@ void putback_lru_page(struct page *page)
 
 	VM_BUG_ON(PageLRU(page));
 
+#ifdef CONFIG_CLEANCACHE
+  if (active)
+    SetPageWasActive(page);
+#endif
+
 redo:
 	ClearPageUnevictable(page);
 
@@ -1271,6 +1276,9 @@ static unsigned long clear_active_flags(struct list_head *page_list,
 		if (PageActive(page)) {
 			lru += LRU_ACTIVE;
 			ClearPageActive(page);
+#ifdef CONFIG_CLEANCACHE
+		        SetPageWasActive(page);
+#endif
 			nr_active += numpages;
 		}
 		if (count) {
