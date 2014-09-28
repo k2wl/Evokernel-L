@@ -1089,7 +1089,7 @@ static struct android_usb_function *supported_functions[] = {
 	&accessory_function,
 	&audio_source_function,
 	&ncm_function,
-	&hid_functions,
+	&hid_function,
 	NULL
 };
 
