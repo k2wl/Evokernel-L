@@ -83,6 +83,8 @@ GTAGS
 \#*#
 build.sh
 changelog.sh
+vchiq_version.c
+drivers/misc/vc04_services/interface/vchiq_arm/vchiq_version.c
 version
 arch/arm/boot/compressed/ashldi3.S
 arch/arm/boot/compressed/piggy.xzkern
