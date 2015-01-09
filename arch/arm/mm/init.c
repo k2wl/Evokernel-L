@@ -417,7 +417,6 @@ void __init arm_memblock_init(struct meminfo *mi, struct machine_desc *mdesc)
 	   must come from DMA area inside low memory */
 	dma_contiguous_reserve(arm_dma_limit < arm_lowmem_limit ?
 			       arm_dma_limit : arm_lowmem_limit);
-	memblock_analyze();
 	memblock_allow_resize();
 	memblock_dump_all();
 }
