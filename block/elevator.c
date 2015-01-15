@@ -71,8 +71,8 @@ static int elv_iosched_allow_merge(struct request *rq, struct bio *bio)
 	if (e->type->ops.elevator_allow_merge_fn)
 		return e->type->ops.elevator_allow_merge_fn(q, rq, bio);
 #else
-	if (rq->q->elevator->ops->elevator_allow_merge_fn)
-		return rq->q->elevator->ops->elevator_allow_merge_fn(rq->q, rq, bio);
+	//if (rq->q->elevator->ops->elevator_allow_merge_fn)
+		// return rq->q->elevator->ops->elevator_allow_merge_fn(rq->q, rq, bio);
 #endif
 
 	return 1;
