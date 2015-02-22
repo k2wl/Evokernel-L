@@ -1505,7 +1505,7 @@ shrink_inactive_list(unsigned long nr_to_scan, struct zone *zone,
 	int mode;
 
 	while (unlikely(too_many_isolated(zone, file, sc))) {
-		congestion_wait(BLK_RW_ASYNC, HZ/10);
+		congestion_wait_kswapd(BLK_RW_ASYNC, HZ/10);
 
 		/* We are about to die and free our memory. Return now. */
 		if (fatal_signal_pending(current))
