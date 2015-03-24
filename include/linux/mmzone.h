@@ -213,7 +213,6 @@ static inline int is_unevictable_lru(enum lru_list l)
 #define LRU_ALL_EVICTABLE (LRU_ALL_FILE | LRU_ALL_ANON)
 #define LRU_ALL	     ((1 << NR_LRU_LISTS) - 1)
 
->>>>>>> b2c735e... memcg: consolidate memory cgroup lru stat functions
 enum zone_watermarks {
 	WMARK_MIN,
 	WMARK_LOW,
