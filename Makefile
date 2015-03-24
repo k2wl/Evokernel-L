@@ -379,7 +379,7 @@ KBUILD_CPPFLAGS := -D__KERNEL__
 KBUILD_CFLAGS   := -Wall -Wundef -Wno-trigraphs \
 		   -fno-strict-aliasing -fno-common \
 		   -Wno-format-security \
-		   -Werror-implicit-function-declaration \
+		   # -Werror-implicit-function-declaration \
 		   -fmodulo-sched -fmodulo-sched-allow-regmoves \
 		   -march=armv7-a -mfpu=neon -mcpu=cortex-a9 -mtune=cortex-a9 \
 		   -funswitch-loops -fpredictive-commoning -fgcse-after-reload \
